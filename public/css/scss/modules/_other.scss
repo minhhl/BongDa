@@ -1,0 +1,190 @@
+//**
+// Other Useful Reusable Styles
+//**/
+
+* {
+  @include box-sizing(border-box !important);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.valign {
+  vertical-align: middle;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin: $padding 0;
+}
+
+.subtle {
+  color: $subtle-color;
+}
+
+.relative {
+  position: relative;
+}
+
+.transition{
+  @include transition(200ms);
+}
+
+hr{
+  margin: 0;
+  margin-top: 10px;
+  border-bottom-width: 2px;
+}
+.theme-green{
+  hr{
+    border-color: $green;
+  }
+  ul.list{
+    li{
+      &:before{
+        background-color: $green;
+      }
+    }
+  }
+  .section-title{
+    color: $green;
+  }
+}
+.theme-orange{
+  hr{
+    border-color: $orange;
+  }
+  ul.list{
+    li{
+      &:before{
+        background-color: $orange;
+      }
+    }
+  }
+  .section-title{
+    color: $orange;
+  }
+}
+.theme-yellow{
+  hr{
+    border-color: $yellow;
+  }
+  ul.list{
+    li{
+      &:before{
+        background-color: $yellow;
+      }
+    }
+  }
+  .section-title{
+    color: $yellow;
+  }
+}
+
+ul.list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li{
+    padding: 8px 0;
+    border-bottom: 1px dashed #d7d7d7;
+    position: relative;
+    .test-link{
+      font-size: 12px;
+      letter-spacing: 0px;
+      color: #000;
+      padding-left: 10px;
+      display: inline-block;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &.bullet-list li{
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }    
+  }
+}
+
+.panel-wrap{
+  background-color: #fff;
+  @include border-radius(15px);
+  border: 1px solid #fafafa;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);;
+  padding: 15px 20px;
+  .panel-title{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family:'ProximaNova-Semibold';
+  }
+  &.panel-large{
+    padding: 0;
+  }
+}
+
+.icon-hot-content, .icon-new-content{
+  padding-left: 5px;
+  position: relative;
+  top: -2px;
+}
+.icon-down, .icon-up{
+  position: relative;
+  top: -2px; 
+}
+
+.rank-badge{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  font-family:'ProximaNova-Semibold';
+  font-size: 16px;
+  &.rank-orange{
+    background: url(../img/icon-top-orange.png) no-repeat;
+  }
+  &.rank-yellow{
+    background: url(../img/icon-top-yellow.png) no-repeat;
+  }
+  &.rank-green{
+    background: url(../img/icon-top-green.png) no-repeat;
+  }
+}

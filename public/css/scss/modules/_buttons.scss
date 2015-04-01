@@ -1,0 +1,80 @@
+//**
+// Buttons
+//**/
+
+// Default button
+.btn{
+  @extend .transition;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  padding: 0;
+  &:hover{
+    color: #fff;
+  }
+}
+
+.btn-rounded{
+  @include border-radius(20px);
+}
+
+.btn-yellow{
+  background-color: $yellow;
+  border-bottom: 2px solid $yellow-dark;
+  &:hover{
+    background-color: lighten($yellow, 10%);
+  }
+}
+
+.btn-green{
+  background-color: $green;
+  border-bottom: 2px solid $green-dark;
+  &:hover{
+    background-color: lighten($green, 10%);
+  }
+}
+
+.btn-normal{
+  font-size: 13px;
+}
+
+.more-btn{
+  color: #000;
+  font-size: 12px;
+  border: 1px solid #e2e2e2;
+  @include border-radius(5px);
+  text-align: center;
+  padding: 0;
+  height: 26px;
+  width: 72px;
+  line-height: 26px;
+  display: block;
+  &:hover{
+    color: #000;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e2e2e2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2e2e2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e2e2e2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#e2e2e2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#e2e2e2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e2e2e2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+  }
+}
+
+// Responsive styles if needed
+// @include responsive($big-break) {
+// }
+@include responsive($small-break) {
+  .btn {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }

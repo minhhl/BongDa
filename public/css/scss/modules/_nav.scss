@@ -1,0 +1,114 @@
+//**
+// Navigation
+//**/
+
+nav {
+  a {
+    display: inline-block;
+    padding: 10px 30px;
+  }
+}
+
+.nav-top-bar{
+  background-color: #fff;
+  height: 96px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e3e3e3;
+  position: relative;
+  z-index: 1;
+  .navbar-brand{
+    height: 96px;
+    padding: 0;
+    line-height: 96px;
+    margin-left: 30px!important;
+    img{
+      vertical-align: middle;
+      display: inline-block;
+      margin-bottom: 0.5em;
+    }
+  }
+  .btn{
+    width: 112px;
+    height: 36px;
+    line-height: 36px;
+    float: left;
+    margin: 0 5px;
+  }
+  .dropdown-toggle{
+    font-size: 14px;
+    color: #5e5e5e;
+    display: block;
+    float: left;
+  }
+  
+  .navbar-toggle .icon-bar{
+    background-color: #000;
+  }
+}
+
+.nav-bar-secondary{
+  background-color: $orange;
+  margin-bottom: 0;
+  @include border-radius(0);
+  margin-top: 5px;
+  min-height: 44px!important;
+  border: 0;
+  border-bottom: 2px solid $orange-dark;
+  ul{
+    &.navbar{
+      margin: 0;
+      padding: 0;
+      border-bottom-width: 0;
+      &>li{
+        &:hover, &.active{
+          background-color: $orange-dark;
+        }
+        &>a{
+          color: #fff;
+          font-size: 13px;
+          text-transform: uppercase;
+          display: block;
+          &:hover{
+            background-color: transparent;
+            background-image: none;
+          }
+        }
+      }
+    }
+  }
+  .navbar-toggle .icon-bar{
+    background-color: #000;
+  }
+}
+@include mobilefirst($sm-break){
+  .nav-top-bar{
+    .navbar-right{
+      margin-top: 23px;
+    }
+  }
+  .btn{
+    margin-top: 5px!important;
+  }
+  .nav-bar-secondary{
+    ul{
+      &.navbar{
+        li{
+          float: left;
+          padding: 15px 0;
+          a{
+            padding: 0 28px;
+            border-right: 1px solid $orange-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive($sm-break){
+  .nav-top-bar{
+    .navbar-right-wrapper{
+      background-color: #fff;
+    }
+  }
+}
